@@ -1,0 +1,27 @@
+---
+title: Wise Man's Fear
+---
+
+{% macro displayChapter (chapter) %}
+{{ chapter.prefix }}: {{ chapter.prompt }}
+{% endmacro %}
+
+<link rel="stylesheet" href="/css/main.css">
+
+<div class="fixed sidebar_button">
+</div>
+
+<div class="fixed sidebar">
+  {% for chapter in collections.chapters %}
+    <a href="#{{ chapter.id }}">{{ displayChapter(chapter) }}</a>
+  {% endfor %}
+</div>
+
+<div class="gallery">
+  {% for chapter in collections.chapters %}
+    <div id="{{ chapter.id }}" class="chapter_frame">
+      <img class="image" src="/assets/img/{{ chapter.path }}" alt="{{ chapter.prompt }}"></img>
+      <text>{{ displayChapter(chapter) }}</text>
+    </div>
+  {% endfor %}
+</div>

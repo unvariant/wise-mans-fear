@@ -1,0 +1,16 @@
+{
+  "name": "wise_mans_fear",
+  "version": "1.0.0",
+  "description": "stable diffusion wackiness",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --watch"
+  },
+  "author": "unvariant.winter@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "object-hash": "^3.0.0"
+  }
+}

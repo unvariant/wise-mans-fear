@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior:smooth;
+}
+
+.chapter_frame {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:1%;
+    margin:1%;
+
+    background-color:antiquewhite;
+
+    font-size:32px;
+}
+
+.gallery {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+.fixed {
+    top:0%;
+    left:0%;
+    position:fixed;
+}
+
+.sidebar {
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+
+    overflow-y:scroll;
+
+    background-color:grey;
+
+    visibility:hidden;
+
+    -webkit-transform: translate3d(-100%, 0px, 0px);
+    transform: translate3d(-100%, 0px, 0px);
+    /* display: none; */
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+}
+
+.sidebar a:link,
+.sidebar a:hover,
+.sidebar a:active,
+.sidebar a:visited {
+    color:white;
+}
+
+.sidebar_button {
+    height:100px;
+    width:100px;
+    background-color:black;
+}
+
+.sidebar:hover {
+    visibility:visible;
+
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+}
+
+.sidebar_button:hover ~ .sidebar {
+    visibility:visible;
+
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0ms both;
+}
