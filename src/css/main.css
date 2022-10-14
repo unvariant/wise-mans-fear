@@ -20,11 +20,17 @@ html {
     font-size:32px;
 }
 
+.chapter_title {
+    display:block;
+    width:512px; /* hacky solution, each image is 512x512 so setting text width to this forces overflow */
+    text-align:center;
+}
+
 .gallery {
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .fixed {
@@ -64,9 +70,14 @@ html {
 }
 
 .sidebar_button {
-    height:100px;
-    width:100px;
+    display:flex;
     background-color:black;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:32px;
+    padding:0.5%;
 }
 
 .sidebar:hover {
