@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
 
         passthroughFileCopy: true,
 
+        pathPrefix: "/wise-mans-fear/",
+
         dir: {
             input: "src",
             includes: "include",

@@ -6,9 +6,7 @@ title: Wise Man's Fear
 {{ chapter.prefix }}: {{ chapter.prompt }}
 {% endmacro %}
 
-<base href="https://unvariant.github.io/wise-mans-fear/"></base>
-
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 
 <div class="fixed sidebar_button">
 </div>
@@ -22,7 +20,8 @@ title: Wise Man's Fear
 <div class="gallery">
   {% for chapter in collections.chapters %}
     <div id="{{ chapter.id }}" class="chapter_frame">
-      <img class="image" src="/assets/img{{ chapter.path }}" alt="{{ displayChapter(chapter) }}"></img>
+      {% set path %}/assets/img{{ chapter.path }}{% endset %}
+      <img class="image" src="{{ path | url }}" alt="{{ displayChapter(chapter) }}"></img>
       <text>{{ displayChapter(chapter) }}</text>
     </div>
   {% endfor %}
