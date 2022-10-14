@@ -20,7 +20,8 @@ title: Wise Man's Fear
 <div class="gallery">
   {% for chapter in collections.chapters %}
     <div id="{{ chapter.id }}" class="chapter_frame">
-      <img class="image" src="{{ '/assets/img/{{ chapter.path }}' | url }}" alt="{{ chapter.prompt }}"></img>
+      {% set path %}/assets/img{{ chapter.path }}{% endset %}
+      <img class="image" src="{{ path | url }}" alt="{{ chapter.prompt }}"></img>
       <text>{{ displayChapter(chapter) }}</text>
     </div>
   {% endfor %}
